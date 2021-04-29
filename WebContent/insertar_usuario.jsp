@@ -8,16 +8,16 @@
 	</head>
 	<body>
 		<div align="center">
-			<h1>Insertar Rol</h1>
-			<form action="<%=request.getContextPath()%>/VistaInsertarRol" method="post">
+			<h1>Insertar Usuario</h1>
+			<form action="<%=request.getContextPath()%>/VistaInsertarUsuario" method="post">
 				<table style="with: 100%">
 					<tr>
 						<td>Id</td>
 						<td><input type="text" name="id" /></td>
 					</tr>
 					<tr>
-						<td>Rol</td>
-						<td><input type="text" name="rol" /></td>
+						<td>Id Rol</td>
+						<td><input type="text" name="id_rol" /></td>
 					</tr>
 				</table>
 				<input type="submit" value="Insertar"/>
