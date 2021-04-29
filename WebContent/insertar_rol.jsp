@@ -20,7 +20,7 @@
 						<td><input type="text" name="rol" /></td>
 					</tr>
 				</table>
-				<input type="submit" value="Registrar"/>
+				<input type="submit" value="Insertar"/>
 			</form>
 		</div>
 	</body>
