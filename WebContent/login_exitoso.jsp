@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<div align="center">
-			<h1>Has iniciado sesión correctamente</h1>
+			<h1>Bienvenido,</h1>
 		</div>
 	</body>
 </html>

@@ -9,7 +9,7 @@
 	<body>
 		<div align="center">
 			<h1>Login</h1>
-			<form action="<%=request.getContextPath()%>/login" method="post">
+			<form action="<%=request.getContextPath()%>/VistaLogin" method="post">
 				<table style="with: 100%">
 					<tr>
 						<td>Usuario</td>
@@ -19,9 +19,8 @@
 						<td>Contraseña</td>
 						<td><input type="password" name="password" /></td>
 					</tr>
-	
 				</table>
-				<input type="submit" value="Registrar" />
+				<input type="submit" value="Registrar"/>
 			</form>
 		</div>
 	</body>

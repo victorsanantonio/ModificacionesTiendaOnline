@@ -10,50 +10,51 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Usuarios")
-public class Usuario implements Serializable{
+@Table(name = "Usuarios")
+public class Usuario implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "id")
 	private int id;
-	
+
 	@Column(name = "id_rol", nullable = false)
 	private int id_rol;
-	
+
 	@Column(name = "email", nullable = true)
 	private String email;
-	
+
 	@Column(name = "clave", nullable = true)
 	private String clave;
-	
+
 	@Column(name = "nombre", nullable = true)
 	private String nombre;
-	
+
 	@Column(name = "apellido1", nullable = true)
 	private String apellido1;
-	
+
 	@Column(name = "apellido2", nullable = true)
 	private String apellido2;
-	
+
 	@Column(name = "direccion", nullable = true)
 	private String direccion;
-	
+
 	@Column(name = "localidad", nullable = true)
 	private String localidad;
-	
+
 	@Column(name = "provincia", nullable = true)
 	private String provincia;
-	
+
 	@Column(name = "telefono", nullable = true)
 	private String telefono;
-	
+
 	@Column(name = "dni", nullable = true)
 	private String dni;
-	
-	public Usuario() {}
-	
+
+	public Usuario() {
+	}
+
 	public Usuario(int id, int id_rol, String email, String clave, String nombre, String apellido1, String apellido2,
 			String direccion, String localidad, String provincia, String telefono, String dni) {
 		super();

@@ -1,0 +1,6 @@
+vista\VistaLogin.class
+controlador\Login.class
+controlador\crud\Consultar.class
+conexion\HibernateUtil.class
+modelo\Rol.class
+modelo\Usuario.class
