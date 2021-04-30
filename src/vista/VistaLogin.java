@@ -30,13 +30,11 @@ public class VistaLogin extends HttpServlet {
 		if (login.validarCredenciales(username, password)) {
 			// HttpSession session = request.getSession();
 			// session.setAttribute("username",username);
-			//response.sendRedirect("login_exitoso.jsp");
-			responseE(response, username);
+			response.sendRedirect("login_exitoso.jsp");
 		} else {
-			// HttpSession session = request.getSession();
+			HttpSession session = request.getSession();
 			// session.setAttribute("user", username);
-			//response.sendRedirect("login_fallido.jsp");
-			responseF(response);
+			response.sendRedirect("login_fallido.jsp");
 		}
 	}
 
@@ -49,32 +47,11 @@ public class VistaLogin extends HttpServlet {
 		if (login.validarCredenciales(username, password)) {
 			// HttpSession session = request.getSession();
 			// session.setAttribute("username",username);
-			//response.sendRedirect("login_exitoso.jsp");
-			responseE(response, username);
+			response.sendRedirect("login_exitoso.jsp");
 		} else {
 			HttpSession session = request.getSession();
 			// session.setAttribute("user", username);
-			//response.sendRedirect("login.jsp");
-			responseF(response);
+			response.sendRedirect("login_fallido.jsp");
 		}
-	}
-
-	private void responseE(HttpServletResponse resp, String username) throws IOException {
-		PrintWriter out = resp.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h1>Bienvenido, "+ username + "</h1>");
-		out.println("</body>");
-		out.println("</html>");
-	}
-	
-	private void responseF(HttpServletResponse resp) throws IOException {
-		PrintWriter out = resp.getWriter();
-		out.println("<html>");
-		out.println("<body>");
-		out.println("<h1>El usuario o contraseña no son correctos</h1>");
-		out.println("<p>No se ha podido acceder a la aplicación</p>");
-		out.println("</body>");
-		out.println("</html>");
 	}
 }
