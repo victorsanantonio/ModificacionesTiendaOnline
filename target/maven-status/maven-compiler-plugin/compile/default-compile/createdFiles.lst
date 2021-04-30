@@ -1,6 +1,11 @@
-vista\VistaLogin.class
 controlador\Login.class
 controlador\crud\Consultar.class
-conexion\HibernateUtil.class
+vista\VistaListarUsuarios.class
 modelo\Rol.class
+vista\VistaInsertarRol.class
+vista\VistaInsertarUsuario.class
+vista\VistaLogin.class
+vista\VistaListarRoles.class
+conexion\HibernateUtil.class
 modelo\Usuario.class
+controlador\crud\Insertar.class

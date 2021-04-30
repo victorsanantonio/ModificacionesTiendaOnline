@@ -1,0 +1,10 @@
+/META-INF/
+/WEB-INF/
+/insertar_rol.jsp
+/insertar_usuario.jsp
+/listado_roles.jsp
+/listado_usuarios.jsp
+/login.jsp
+/login_exitoso.jsp
+/login_fallido.jsp
+/vista/
