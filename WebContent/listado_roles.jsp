@@ -26,5 +26,6 @@
 				</c:forEach>
 			</table>
 		</form>
+		<jsp:include page="Footer.jsp" />
 	</body>
 </html>

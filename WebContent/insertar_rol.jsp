@@ -23,5 +23,6 @@
 				<input type="submit" value="Insertar"/>
 			</form>
 		</div>
+		<jsp:include page="Footer.jsp" />
 	</body>
 </html>
