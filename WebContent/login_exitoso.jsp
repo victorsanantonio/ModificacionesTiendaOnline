@@ -26,6 +26,14 @@
 								<input type="submit" formaction="insertar_rol.jsp"
 									value="Alta de rol">
 							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="insertar_categoria.jsp"
+									value="Alta de categoría">
+							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="insertar_producto.jsp"
+									value="Alta de producto">
+							</form>
 						</td>
 						<td>
 							<form method="post" action="">
@@ -35,6 +43,14 @@
 							<form method="post" action="">
 								<input type="submit" formaction="VistaListarRoles"
 									value="Listado de roles">
+							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="VistaListarCategorias"
+									value="Listado de categorías">
+							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="VistaListarProductos"
+									value="Listado de productos">
 							</form>
 						</td>
 					</tr>
@@ -42,8 +58,19 @@
 			</c:when>
 			<c:when test="${sessionScope.idRolUsuario=='2'}">
 				<table border="1">
+					<th>Altas</th>
 					<th>Listados</th>
 					<tr>
+						<td>
+							<form method="post" action="">
+								<input type="submit" formaction="insertar_categoria.jsp"
+									value="Alta de categoría">
+							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="insertar_producto.jsp"
+									value="Alta de producto">
+							</form>
+						</td>
 						<td>
 							<form method="post" action="">
 								<input type="submit" formaction="VistaListarUsuarios"
@@ -53,12 +80,30 @@
 								<input type="submit" formaction="VistaListarRoles"
 									value="Listado de roles">
 							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="VistaListarCategorias"
+									value="Listado de categorías">
+							</form>
+							<form method="post" action="">
+								<input type="submit" formaction="VistaListarProductos"
+									value="Listado de productos">
+							</form>
 						</td>
 					</tr>
 				</table>
 			</c:when>
 			<c:when test="${sessionScope.idRolUsuario=='3'}">
-				<p>Inicio de sesión exitoso</p>
+				<table border="1">
+					<th>Listados</th>
+					<tr>
+						<td>
+							<form method="post" action="">
+								<input type="submit" formaction="VistaListarProductos"
+									value="Listado de productos">
+							</form>
+						</td>
+					</tr>
+				</table>
 			</c:when>
 		</c:choose>
 	</div>

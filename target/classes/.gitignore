@@ -2,3 +2,9 @@
 /controlador/
 /Header.jsp
 /logout.jsp
+/modelo/
+/listado_productos.jsp
+/listado_categorias
+/listado_categorias.jsp
+/insertar_categoria.jsp
+/insertar_producto.jsp
