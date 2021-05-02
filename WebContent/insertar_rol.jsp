@@ -7,6 +7,7 @@
 		<title>Login</title>
 	</head>
 	<body>
+		<jsp:include page="Header.jsp" />
 		<div align="center">
 			<h1>Insertar Rol</h1>
 			<form action="<%=request.getContextPath()%>/VistaInsertarRol" method="post">

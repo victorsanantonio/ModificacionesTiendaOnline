@@ -11,6 +11,7 @@
 		<title>Listado de usuarios</title>
 	</head>
 	<body>
+		<jsp:include page="Header.jsp" />
 		<h2>Listado de usuarios</h2>
 		<form action="" method="post">
 			<table border="2">
