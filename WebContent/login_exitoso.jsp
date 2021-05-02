@@ -8,6 +8,7 @@
 <title>Login exitoso</title>
 </head>
 <body>
+	<jsp:include page="Header.jsp" />
 	<div align="center">
 		<h1>Bienvenido, ${sessionScope.nombreCompleto}.</h1>
 		<c:choose>
