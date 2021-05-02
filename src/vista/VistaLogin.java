@@ -47,8 +47,12 @@ public class VistaLogin extends HttpServlet {
 			// Construir el nombre completo
 			String nombreCompleto = usuario.getNombre() + " " + usuario.getApellido1() + " " + usuario.getApellido2();
 			logger.info("Nombre del usuario: " + nombreCompleto);
+			
+			int idRolUsuario = usuario.getId_rol(); 
+			logger.info("Usuario: "+nombreCompleto+"\nRol: "+idRolUsuario);
 
 			session.setAttribute("nombreCompleto", nombreCompleto);
+			session.setAttribute("idRolUsuario", idRolUsuario);
 			request.getRequestDispatcher("login_exitoso.jsp").forward(request, response);
 
 		} else {

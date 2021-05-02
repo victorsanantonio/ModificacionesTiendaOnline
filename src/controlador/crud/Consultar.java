@@ -51,7 +51,7 @@ public class Consultar {
 
 		return usuario;
 	}
-
+	
 	public Rol obtenerRol(int idRol) {
 		iniciaOperacion();
 		Rol rol = null;
