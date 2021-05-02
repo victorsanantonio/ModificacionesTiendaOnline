@@ -8,6 +8,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
+import modelo.Categoria;
+import modelo.Producto;
 import modelo.Rol;
 import modelo.Usuario;
 
@@ -86,5 +88,41 @@ public class Consultar {
 		terminaOperacion();
 		logger.info("Usuarios listados correctamente");
 		return usuarios;
+	}
+	
+	public Categoria obtenerCategoria(int idCategoria) {
+		iniciaOperacion();
+		Categoria categoria = null;
+		categoria = (Categoria) session.get(Categoria.class, idCategoria);
+		terminaOperacion();
+		logger.info("Categoria obtenida a partir del id: " + idCategoria);
+		return categoria;
+	}
+
+	public List<Categoria> listarCategorias() {
+		List<Categoria> categorias = null;
+		iniciaOperacion();
+		categorias = session.createQuery("from Categoria").list();
+		terminaOperacion();
+		logger.info("Categorias listadas correctamente");
+		return categorias;
+	}
+	
+	public Producto obtenerProducto(int idProducto) {
+		iniciaOperacion();
+		Producto producto = null;
+		producto = (Producto) session.get(Producto.class, idProducto);
+		terminaOperacion();
+		logger.info("Producto obtenido a partir del id: " + idProducto);
+		return producto;
+	}
+
+	public List<Producto> listarProductos() {
+		List<Producto> productos = null;
+		iniciaOperacion();
+		productos = session.createQuery("from Producto").list();
+		terminaOperacion();
+		logger.info("Productos listados correctamente");
+		return productos;
 	}
 }
