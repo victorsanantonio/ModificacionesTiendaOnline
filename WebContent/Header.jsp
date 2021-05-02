@@ -19,6 +19,7 @@
 			<div>
 				<button type="button" onclick="window.history.back()">Volver</button>
 			</div>
+			<% session.setMaxInactiveInterval(10); %>
 		</div>
 	</body>
 </html>
