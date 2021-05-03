@@ -3,6 +3,7 @@
 <%@ page import="java.util.*, modelo.*, vista.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
+<%@taglib  uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,6 +11,7 @@
 		<title>Listado de roles</title>
 	</head>
 	<body>
+		<jsp:include page="Header.jsp" />
 		<h2>Listado de roles</h2>
 		<form action="" method="post">
 			<table border="2">
@@ -17,9 +19,7 @@
 					<th>Id</th>
 					<th>Rol</th>
 				</tr>
-				<c:forEach items="${pageScope.roles}" var="role"
-					varStatus="status" begin="0"
-					end="${pageScope.roles.size() - 1}">
+				<c:forEach items="${sessionScope.roles}" var="role" varStatus="status">
 					<tr>
 						<td><c:out value="${role.id}"></c:out></td>
 						<td><c:out value="${role.rol}"></c:out></td>
@@ -27,5 +27,6 @@
 				</c:forEach>
 			</table>
 		</form>
+		<jsp:include page="Footer.jsp" />
 	</body>
 </html>

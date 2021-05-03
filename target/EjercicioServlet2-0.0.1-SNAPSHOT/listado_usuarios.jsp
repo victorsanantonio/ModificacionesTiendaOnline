@@ -1,38 +1,53 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
 <%@ page import="java.util.*, modelo.*, vista.*"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
-
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>Listado de usuarios</title>
-		<link rel="stylesheet" type="text/css" href="css/app_styles.css"
-			media="screen">
 	</head>
 	<body>
+		<jsp:include page="Header.jsp" />
 		<h2>Listado de usuarios</h2>
 		<form action="" method="post">
 			<table border="2">
 				<tr>
-					<th>AÃ±adir</th>
-					<th>Producto</th>
-					<th>DescripciÃ³n</th>
-					<th>Precio</th>
+					<th>Id</th>
+					<th>Id Rol</th>
+					<th>Email</th>
+					<th>Clave</th>
+					<th>Nombre</th>
+					<th>Primer apellido</th>
+					<th>Segundo apellido</th>
+					<th>Dirección</th>
+					<th>Localidad</th>
+					<th>Provincia</th>
+					<th>Teléfono</th>
+					<th>DNI</th>
 				</tr>
-				<c:forEach items="${pageScope.productList}" var="producto"
-					varStatus="status" begin="0"
-					end="${pageScope.productList.size() - 1}">
+				<c:forEach items="${sessionScope.usuarios}" var="usuario"
+					varStatus="status">
 					<tr>
-						<td><c:out value="${producto.nombre}"></c:out></td>
-						<td><c:out value="${producto.descripcion}"></c:out></td>
-						<td><fmt:formatNumber value="${producto.precio}"
-								type="currency" /></td>
+						<td><c:out value="${usuario.id}"></c:out></td>
+						<td><c:out value="${usuario.id_rol}"></c:out></td>
+						<td><c:out value="${usuario.email}"></c:out></td>
+						<td><c:out value="${usuario.clave}"></c:out></td>
+						<td><c:out value="${usuario.nombre}"></c:out></td>
+						<td><c:out value="${usuario.apellido1}"></c:out></td>
+						<td><c:out value="${usuario.apellido2}"></c:out></td>
+						<td><c:out value="${usuario.direccion}"></c:out></td>
+						<td><c:out value="${usuario.localidad}"></c:out></td>
+						<td><c:out value="${usuario.provincia}"></c:out></td>
+						<td><c:out value="${usuario.telefono}"></c:out></td>
+						<td><c:out value="${usuario.dni}"></c:out></td>
 					</tr>
 				</c:forEach>
 			</table>
 		</form>
+		<jsp:include page="Footer.jsp" />
 	</body>
 </html>

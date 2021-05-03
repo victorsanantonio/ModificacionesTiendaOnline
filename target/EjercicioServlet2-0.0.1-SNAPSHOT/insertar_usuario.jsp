@@ -4,9 +4,10 @@
 <html>
 	<head>
 		<meta charset="ISO-8859-1">
-		<title>Login</title>
+		<title>Insertar Producto</title>
 	</head>
 	<body>
+		<jsp:include page="Header.jsp" />
 		<div align="center">
 			<h1>Insertar Usuario</h1>
 			<form action="<%=request.getContextPath()%>/VistaInsertarUsuario" method="post">
@@ -63,5 +64,6 @@
 				<input type="submit" value="Insertar"/>
 			</form>
 		</div>
+		<jsp:include page="Footer.jsp" />
 	</body>
 </html>
