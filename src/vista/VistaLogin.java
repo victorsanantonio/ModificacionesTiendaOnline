@@ -33,7 +33,8 @@ public class VistaLogin extends HttpServlet {
 
 		String username = request.getParameter("username");
 		String password = request.getParameter("password");
-
+		logger.info("Usuario: "+username);
+		logger.info("Contraseña: "+password);
 		if (login.validarCredenciales(username, password)) {
 			// HttpSession session = request.getSession();
 			// session.setAttribute("username",username);
